@@ -11,9 +11,8 @@ const App: React.FC = () => {
       console.log(promise)
     };
     fetchData();
-
+    
   }, [setS]);
-
   return (
     <div>
       <h1>{s}</h1>
