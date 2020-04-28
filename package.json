@@ -12,7 +12,7 @@
     "dev": "ts-node-dev index.ts",
     "lint": "eslint --ext .ts .",
     "build": "cd ui/ && npm install && npm run build",
-    "start": "ts-node server/index.ts"
+    "start": "ts-node ./server/index.ts"
   },
   "cacheDirectories": [
     "node_modules",
@@ -22,7 +22,9 @@
   "license": "MIT",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "ts-node": "8.8.2"
+
   },
   "devDependencies": {
     "@types/cors": "^2.8.6",
