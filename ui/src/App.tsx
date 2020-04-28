@@ -2,16 +2,16 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const App: React.FC = () => {
-  const [s, setS] = useState<string | undefined>(undefined)
+  const [s, setS] = useState<string | undefined>(undefined);
 
   useEffect(() => {
     const fetchData = async () => {
       const promise = await axios.get<string>('http://localhost:3001/ping');
       setS(promise.data);
-    }
-    fetchData()
+    };
+    fetchData();
 
-  }, [setS])
+  }, [setS]);
 
   return (
     <div>
@@ -19,5 +19,5 @@ const App: React.FC = () => {
       <p>setting things up, this is going to be _the_ new media!</p>
     </div>
   );
-}
+};
 export default App;
