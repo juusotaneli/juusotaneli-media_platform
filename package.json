@@ -7,8 +7,13 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "tsc": "tsc",
     "dev": "ts-node-dev index.ts",
-    "lint": "eslint --ext .ts ."
+    "lint": "eslint --ext .ts .",
+    "build": "ui/ && npm install && npm run build"
   },
+  "cacheDirectories": [
+    "node_modules",
+    "ui/node_modules"
+  ],
   "author": "juusotaneli",
   "license": "MIT",
   "dependencies": {
