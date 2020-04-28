@@ -27,13 +27,13 @@ jobs: # a collection of steps
           command: 'sudo npm install -g npm@latest'
       - run:
           name: install-npm-wee
-          command: cd server && npm install
+          command: cd ui && npm install
       - run: # run test
           name: test
-          command: cd server && npm test
+          command: cd ui && npm test
       - run: # run eslint
           name: lint
-          command: cd server && npm run lint
+          command: cd ui && npm run lint
 workflows:
   version: 2.1
   concurrently:
