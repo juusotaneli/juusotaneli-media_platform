@@ -15,10 +15,10 @@ jobs: # a collection of steps
       - run: # run eslint
           name: lint
           command: cd server && npm run lint
-          
+
   ui:
     working_directory: ~/ui
-     docker: # run the steps with Docker
+    docker:
       - image: circleci/node:12.14.1-browsers # ...with this image as the primary container; this is where all `steps` will run
     steps: # a collection of executable commands
       - checkout # special step to check out source code to working directory
