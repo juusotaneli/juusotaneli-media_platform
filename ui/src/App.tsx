@@ -8,10 +8,9 @@ const App: React.FC = () => {
     const fetchData = async () => {
       const promise = await axios.get<string>('https://newmedium.herokuapp.com/ping');
       setS(promise.data);
-      console.log(promise)
     };
     fetchData();
-    
+
   }, [setS]);
   return (
     <div>
