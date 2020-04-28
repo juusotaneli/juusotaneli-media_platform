@@ -12,7 +12,7 @@
     "dev": "ts-node-dev index.ts",
     "lint": "eslint --ext .ts .",
     "build": "cd ui/ && npm install && npm run build",
-    "start": "node build/index.js"
+    "start": "ts-node index.ts"
   },
   "cacheDirectories": [
     "node_modules",
