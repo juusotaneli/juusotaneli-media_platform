@@ -6,7 +6,7 @@ const App: React.FC = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const promise = await axios.get<string>('http://localhost:3001/ping');
+      const promise = await axios.get<string>('https://newmedium.herokuapp.com/ping');
       setS(promise.data);
     };
     fetchData();
