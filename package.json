@@ -11,8 +11,8 @@
     "tsc": "tsc",
     "dev": "ts-node-dev server/index.ts",
     "lint": "eslint --ext .ts .",
-    "build": "cd ui/ && npm install && npm run build",
-    "start": "npm install && npm run tsc && node build/index.js"
+    "build": "npm run tsc && cd ui/ && npm install && npm run build",
+    "start": "node build/index.js"
   },
   "cacheDirectories": [
     "node_modules",
