@@ -34,4 +34,10 @@ jobs: # a collection of steps
       - run: # run eslint
           name: lint
           command: cd server && npm run lint
+workflows:
+  version: 2.1
+  concurrently:
+    jobs:
+      - server
+      - ui
 
