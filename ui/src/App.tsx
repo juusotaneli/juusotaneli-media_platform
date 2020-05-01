@@ -10,14 +10,14 @@ const App: React.FC = () => {
       setS(promise.data.news);
     };
     fetchData();
-  }, [setS]);
+  }, []);
 
   console.log(s);
   if (s !== undefined) {
     return (
       <div>
         {s.map((n: any) =>
-          <div key={n.url}>
+          <div key={n}>
             <h2>{n.title}</h2>
             <img src={n.image}></img>
           </div>
