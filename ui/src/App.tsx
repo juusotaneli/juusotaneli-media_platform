@@ -13,7 +13,7 @@ const App: React.FC = () => {
   }, [setS]);
 
   console.log(s);
-  if (s.length !== 0) {
+  if (s !== undefined) {
     return (
       <div>
         {s.slice(0, 15).map((n: any) =>
