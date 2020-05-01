@@ -2,21 +2,34 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const App: React.FC = () => {
-  const [s, setS] = useState<string | undefined>(undefined);
+  const [s, setS] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
-      const promise = await axios.get<string>('https://newmedium.herokuapp.com/ping');
-      setS(promise.data);
+      const promise = await axios.get('http://localhost:3001/ping');
+      setS(promise.data.news);
     };
     fetchData();
-
   }, [setS]);
-  return (
-    <div>
-      <h1>{s}</h1>
-      <p>setting things up, this is going to be _the_ new media!</p>
-    </div>
-  );
+
+  console.log(s)
+  if (s.length !== 0) {
+    return (
+      <div>
+        {s.map((n: any) =>
+
+          <div>
+            <h2>{n.title}</h2>
+            <img src={n.image}></img>
+          </div>
+        )}
+      </div>
+
+    );
+  } return (
+    <>
+    </>
+  )
+
 };
 export default App;
