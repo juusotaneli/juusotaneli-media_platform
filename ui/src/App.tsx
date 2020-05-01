@@ -27,6 +27,7 @@ const App: React.FC = () => {
     );
   } return (
     <>
+    {console.log(s)}
       loading...
     </>
   );
