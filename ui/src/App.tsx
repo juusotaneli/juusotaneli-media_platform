@@ -7,9 +7,7 @@ const App: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       const promise = await axios.get('https://newmedium.herokuapp.com/ping');
-      if (promise.data.news !== undefined) {
-        setS(promise.data.news);
-      }
+      setS(promise.data.news);
     };
     fetchData();
   }, [setS]);
@@ -18,8 +16,8 @@ const App: React.FC = () => {
   if (s !== undefined) {
     return (
       <div>
-        {s.slice(0, 15).map((n: any) =>
-          <div key = {n}>
+        {s.map((n: any) =>
+          <div key={n.url}>
             <h2>{n.title}</h2>
             <img src={n.image}></img>
           </div>
@@ -29,7 +27,7 @@ const App: React.FC = () => {
     );
   } return (
     <>
-    loading...
+      loading...
     </>
   );
 
