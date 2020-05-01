@@ -13,7 +13,7 @@ const App: React.FC = () => {
   }, [s]);
 
   console.log(s);
-  if (s !== undefined) {
+  if (s) {
     return (
       <div>
         {s.map((n: any) =>
