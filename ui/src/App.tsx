@@ -12,13 +12,12 @@ const App: React.FC = () => {
     fetchData();
   }, [setS]);
 
-  console.log(s)
+  console.log(s);
   if (s.length !== 0) {
     return (
       <div>
         {s.map((n: any) =>
-
-          <div>
+          <div key = {n}>
             <h2>{n.title}</h2>
             <img src={n.image}></img>
           </div>
@@ -29,7 +28,7 @@ const App: React.FC = () => {
   } return (
     <>
     </>
-  )
+  );
 
 };
 export default App;
