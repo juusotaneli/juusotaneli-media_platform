@@ -10,7 +10,7 @@ const App: React.FC = () => {
       setS(promise.data.news);
     };
     fetchData();
-  }, [s]);
+  }, [setS]);
 
   console.log(s);
   if (s) {
@@ -27,7 +27,7 @@ const App: React.FC = () => {
     );
   } return (
     <>
-    {console.log(s)}
+      {console.log(s)}
       loading...
     </>
   );
